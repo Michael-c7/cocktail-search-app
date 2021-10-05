@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// replace a tag w/ Link when we start to use react router
+const App = () => {
+    return (
+        <>
+            <nav className="navbar">
+                <a>
+                <img src="https://react-projects-15-cocktails.netlify.app/static/media/logo.9a3d2645.svg" alt=""/>
+                </a>
+            
+                <ul className="navbar__links">
+                    <li className="navbar__link"><a>Home</a></li>
+                    <li className="navbar__link"><a>About</a></li>
+                </ul>
+            </nav>
+
+            <section className="search">
+                <h2 class="search__heading">Search Your Favorite Cocktail</h2>
+                <input className="search__input"/>
+            </section>
+
+            <section className="cocktail">
+                <h2 className="cocktail__heading">Cocktails</h2>
+                <ul className="cocktail__cards">
+                    <li className="cocktail__card">
+                        <img src="https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg" alt=""/>
+                        <h2>A1</h2>
+                        <h3>cocktail glass</h3>
+                        <h4>Alcoholic</h4>
+                        <button><a>Details</a></button>
+                    </li>
+                </ul>
+            </section>
+        </>
+    )
 }
 
-export default App;
+export default App
